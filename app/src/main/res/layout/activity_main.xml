@@ -31,7 +31,7 @@
                 android:id="@+id/imageView6"
                 android:layout_width="0dp"
                 android:layout_height="382dp"
-                android:layout_marginTop="96dp"
+                android:layout_marginTop="68dp"
                 android:contentDescription="@string/displayed_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -44,14 +44,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="70dp"
-                android:fontFamily="@font/pacifico"
+                android:fontFamily="@font/cinzel_decorative"
                 android:text="@string/choose_your_sport"
-                android:textSize="24sp"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView6"
-                app:layout_constraintVertical_bias="0.108" />
+                app:layout_constraintVertical_bias="0.193" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>
