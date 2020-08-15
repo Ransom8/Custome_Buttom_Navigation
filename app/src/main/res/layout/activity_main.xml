@@ -32,6 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="382dp"
                 android:layout_marginTop="96dp"
+                android:contentDescription="@string/displayed_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,10 +63,12 @@
         android:layout_height="83dp"
         android:layout_marginBottom="44dp"
         android:clickable="true"
-        app:layout_constraintTop_toBottomOf="@id/frSwitcher"
+        android:contentDescription="@string/displayed_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/imageView3"
         app:layout_constraintStart_toEndOf="@id/imageView2"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/frSwitcher"
         app:srcCompat="@drawable/football" />
 
     <ImageView
@@ -75,11 +78,13 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="44dp"
         android:clickable="true"
+        android:contentDescription="@string/displayed_image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/frSwitcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/frSwitcher"
         app:srcCompat="@drawable/basketball" />
 
     <ImageView
@@ -89,11 +94,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="44dp"
         android:clickable="true"
+        android:contentDescription="@string/displayed_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@id/frSwitcher"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/frSwitcher"
         app:srcCompat="@drawable/baseball" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
