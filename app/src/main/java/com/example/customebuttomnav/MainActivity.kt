@@ -1,9 +1,9 @@
 package com.example.customebuttomnav
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import androidx.fragment.app.Fragment
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,19 +11,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val firstView: ImageView = findViewById(R.id.imageView2)
+        val firstFragment = FirstFragment()
+        val secondFragment = SecondFragment()
+        val thirdFragment = ThirdFragment()
+        val viewOne = findViewById<ConstraintLayout>(R.id.starter)
+
         imageView2.setOnClickListener {
-            val fragment: Fragment = FirstFragment()
-            supportFragmentManager.beginTransaction().add(R.id.first, fragment).addToBackStack(null).commit()
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.frSwitcher, firstFragment)
+                commit()
+                viewOne.visibility = View.GONE
+            }
         }
 
-//        val secondView: ImageView = findViewById(R.id.imageView4)
         imageView4.setOnClickListener {
-
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.frSwitcher, secondFragment)
+                commit()
+                viewOne.visibility = View.GONE
+            }
         }
 
-//        val thirdView: ImageView = findViewById(R.id.imageView3)
         imageView3.setOnClickListener {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.frSwitcher, thirdFragment)
+                commit()
+                viewOne.visibility = View.GONE
+            }
 
         }
     }
